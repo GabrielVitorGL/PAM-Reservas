@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Reserva.MainPage">
+
+    <Grid VerticalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Label Text="Reservas"
+               SemanticProperties.HeadingLevel="Level1"
+               FontSize="40"
+               HorizontalOptions="Center"
+               VerticalOptions="Start"
+               VerticalTextAlignment="Center"
+               Grid.Row="0" />
+
+        <Button x:Name="ReservaBtn"
+                Text="Reservar"
+                SemanticProperties.Hint="Finaliza sua reserva na área de uso escolhida"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="End"
+                Margin="10"
+                Grid.Row="1" />
+
+    </Grid>
+
+</ContentPage>

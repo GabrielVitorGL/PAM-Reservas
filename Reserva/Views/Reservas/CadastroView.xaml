@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Reserva.Views.Reservas.CadastroView"
+             Title="CadastroView">
+    <Grid VerticalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Label Text="Reservas"
+               SemanticProperties.HeadingLevel="Level1"
+               FontSize="40"
+               HorizontalOptions="Center"
+               VerticalOptions="Start"
+               VerticalTextAlignment="Center"
+               Grid.Row="0" />
+        <ScrollView>
+            <VerticalStackLayout Spacing="3" Padding="15">
+                <Label Text="Id" FontSize="Medium" />
+                <Entry Text="{Binding Id}" FontSize="Medium" IsEnabled="false"/>
+
+                <Label Text="Id do morador" FontSize="Medium" />
+                <Entry Text="{Binding MoradorId}" FontSize="Medium" />
+
+                <Label Text="Id da Area Comum" FontSize="Medium" />
+                <Entry Text="{Binding AreaComumId}" FontSize="Medium" Keyboard="Numeric" />
+
+                <Label Text="Data" FontSize="Medium" />
+                <Entry Text="{Binding Data}" FontSize="Medium" Keyboard="Numeric" />
+            </VerticalStackLayout>
+        </ScrollView>
+
+
+        <Button x:Name="ReservaBtn"
+                Text="Reservar"
+                Command="{Binding SalvarCommand}"
+                SemanticProperties.Hint="Finaliza sua reserva na área de uso escolhida"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="End"
+                Margin="10"
+                Grid.Row="1" />
+
+    </Grid>
+</ContentPage>
